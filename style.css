@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+
+    --h1: 72px;
+    --h2: 32px;
+    --t: 18px;
+    --t-btn: 16px;
+    --letter-spacing: -1px;
+
+    --text_dark: #14171f;
+    --text_light: rgb(103, 112, 132);
+
+    --yellow: #f2c94c;
+
+     --black: rgb(34, 40, 52); /* 222834 */
+
+    --border: 1px solid rgb(229, 231, 235);
+    --radius: 24px;
+}
+
+:root {
+    --color-gray10: #f6f6f6;
+    --color-gray20: #eeeeee;
+    --color-gray30: #e3e3e3;
+    --color-gray40: #d1d1d1;
+    --color-gray50: #acacac;
+    --color-gray60: #8b8b8b;
+    --color-gray70: #646464;
+    --color-gray80: #515151;
+    --color-gray90: #333333;
+}
+
+body {
+    font-family: 'Inter';
+    margin: 0 160px 0 160px;
+}
+
+.underline-hover {
+    display: inline-block;
+    position: relative;
+    color: var(--dark);
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.underline-hover::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2.5px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--yellow);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.underline-hover:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+    cursor: pointer;
+}
+
+.section1 {
+    height: 80vh;
+    /* background: url(img/intro.png);
+    z-index: -1;
+    background-size: cover; */
+}
+
+.section1-intro img {
+    height: auto;
+    width: 100%;
+    background-size: cover;
+    overflow: hidden;
+    background-repeat: no-repeat;
+}
